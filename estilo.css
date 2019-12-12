@@ -1,131 +1,206 @@
-   
-    body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        font-family: helvetica;
-        font-size: 10px;
-    }
+html, body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: helvetica;
+    font-size: 10px;
+}
 
+#bgDesktop 
+{
+    z-index: 0;
+    background-image: url(img/fullbg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-    /* Header and Nav */
+a
+{
+    text-decoration: none;
+}
 
-    header {
-        margin: 0 auto;
-        padding: 0;
-        width: 78em;
-        height: 34em;
-        position: fixed;
-        top: 0;
-        left: calc(50% - 39em);
-        box-sizing: border-box;
-        z-index: 2;
-        box-shadow: 8px 3px 8px gray;
-    }
+/*Este pedaço serve para DESLIGAR as configs MOBILE*/
+#navMenuMobile
+{
+    display: none;
+}
 
-    #bannerHead {
-        background-image: url(img/menu.jpeg);
-        background-size: cover;
-        position: relative;
-        width: 78em;
-        height: 30em;
-        border: 3px solid black;
-        border-width: 0px 2px 0px 2px;
-        box-sizing: border-box;
-    }
+/*Config da lateral direita da página*/
+header
+{
+    position: fixed;
+    width: 10em;
+    height: 10em;
+    padding: .5em;
+    border: 1px outset black;
+    float: right;
+    top: 10em;
+    right: 20em;
+    z-index: 1;
+    background-color: #ffde79;
+    border-radius: 6em;
+    background-image: url(img/headerDesktop.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .6;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+}
+header:hover
+{
+    box-shadow: 2px 4px 1px black;
+}
 
-    #navMenuDesktop {
-        position: relative;
-        width: 78em;
-        height: 4em;
-        margin: 0;
-        padding: 0;
-        border: 3px solid black;
-        border-width: 0px 2px 3px 2px;
-        box-sizing: border-box;
-        z-index: 1;
-        background-color: #f1c40f;
-        display: flex;
-        align-content: space-between;
-    }
-    #navMenuDesktop a {
-        position: relative;
-        height: 35px;
-        margin: 0 auto;
-        color: rgb(68, 68, 68);
-        text-decoration: none;
-        box-sizing: border-box;
-        font-size: 2em;
-        font-weight: bold;
-        line-height: 35px;
-    }#navMenuDesktop a:hover {
-        color: rgb(99, 68, 1);
+#navMenuDesktop
+{
+    display: none;
+    position: relative;
+    padding: 1.5em;
+    box-sizing: border-box;
+    transition: .6s;
+    opacity: .6;
+    z-index: 2;
+    text-align: center;
+}
 
-        transition: .3s;
-    }
+#navMenuDesktop div
+{
+    position: relative;
+    width: 90%;
+    margin: .2em auto;
+    font-size: 1.5em;
+    text-align: center;
+}
 
-    #btnNav {
-        display: none;
-    }
-    #navMenuMobile {
-        display: none;
-    }
+.itens
+{
+    height: 2em;
+    line-height: 2em;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 24px;
+}
+.itens:hover
+{
+    box-shadow: -3px -3px 3px black;
+    background-color: lightgray;
+    cursor: pointer;
+}
 
+img:hover 
+{
+    box-sizing: border-box;
+    border-radius: 24px;
+    box-shadow: 0px 3px 3px black;
+    cursor: pointer;
+}
 
+form
+{
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 24px;
+    padding: .5em;
+    border: 3px outset gray;
+    box-shadow: 3px 3px 8px black;
+    width: 100%;
+}
 
-    /* corpo da página */
+input[type="email"]
+{
+    position: relative;
+    margin: .5em auto;
+    padding: .5em;
+    border-radius: 24px;
+    box-shadow: -1px -2px 6px black;
+    outline: none;
+}
 
-    main {
-        background-color: #ecf0f1;
-        position: relative;
-        width: 78em;
-        border: 3px solid black;
-        border-width: 0px 2px 3px 2px;
-        padding: 5px;
-        margin: 0 auto;
-        margin-top: 34em;
-        box-sizing: border-box;
-    }
+input[type="text"]
+{
+    position: relative;
+    margin: .5em auto;
+    height: 6em;
+    padding: .5em;
+    border-radius: 24px;
+    box-shadow: -1px -2px 6px black;
+    text-align: center;
+    outline: none;
+}
 
-    #quem {
-        padding: 6px;
-        position: relative;
-        border-bottom: 2px solid rgb(196, 196, 196);
-        border-radius: 2.4em;
-        margin: 12px auto;
-        width: 90%;
-        font-size: 1.2em;
-        box-shadow: 2px 2px 1px black;
-    }
+input[type="submit"]:hover
+{
+    cursor: pointer;
+}
 
-    .texto {
-        font-family: helvetica-serif;
-        font-size: 1.6em;
-        text-align: center;;
-    }
+/*Config do corpo da página*/
+main
+{
+    position: relative;
+    width: 50%;
+    float: left;
+    left: 1.5em;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 3px gray;
+    opacity: .8;
+    background-color: #dff9fb;
+    z-index: 1;
+}
 
+#quem
+{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 3em;
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: black;
+    background-color: #ffde79;
+    text-align: justify;
+    letter-spacing: 1px;
+    padding: .5em;
+    box-shadow: -0px 2px 3px black;
+    opacity: unset;
+}
 
-    #empreendimentos {
-        position: relative;
-        width: 100%;
+/*Nesta parte esta a config da área de empreendimentos do site*/
+#empreendimentos
+{
+    width: 95%;
+    margin: 5em auto;
+    padding: 1em;
+    box-sizing: border-box;
+    opacity: unset;
+    border: 2px solid gray;
+    border-radius: 2px;
+    border-width: 2px 0px 2px 0px;
+}
 
-
-        box-sizing: border-box;
-        margin: 12px auto;
-
-    }
-
-    .exibicao {
-        position: relative;
-        box-sizing: border-box;
-        width: 100%;
-        height: 295px;
-        margin: auto;
-        border: 2px solid rgb(124, 124, 124);
-        border-radius: 3px;
-    }
-    .exibicao p {
+.exibicao
+{
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 30em;
+    border: solid black;
+    border-width: 1px 1px 0px 1px;
+    border-radius: 24px 24px 0px 0px;
+    box-shadow: -3px -3px 8px gray;
+}
+.exibicao p {
         position: relative;
         margin: 12px auto;
         background-color: rgb(161, 161, 161);
@@ -137,84 +212,34 @@
         z-index: 1;
         border-radius: 24px;
         box-shadow: 3px 3px 3px black;
-        opacity: .8;
+        opacity: .9;
     }
-
-    .caracteristicasEx {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-        margin-bottom: 6px;
-        padding: 24px;
-        border: 1px solid rgb(124, 124, 124);
-        border-width: 0px 2px 2px 2px;
-        border-radius: 0px 0px 3px 3px;
-    }
-
-    .campos {
+.caracteristicasEx
+{
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: .5em;
+    margin-bottom: 5em;
+    padding: .5em;
+    list-style: none;
+    align-content: space-between;
+    border: solid black;
+    border-width: 0px 1px 1px 1px;
+    border-radius: 0px 0px 24px 24px;
+    box-shadow: 3px 3px 8px gray;
+}
+.campos {
         width: 15%;
-        float: left;
-        margin: 0 4px;
+        margin: .7em;
         color: rgb(61, 61, 61);
         text-align: center;
         font-size: 1.4em;
         list-style: none;
+        display: inline;
     }
 
-
-    #contato {
-        padding: 6px;
-        position: relative;
-        border: 2px solid black;
-        margin: 12px auto;
-        width: 90%;
-        border: 2px solid rgb(196, 196, 196);
-        border-width: 2px 0px 2px 0px;
-        border-radius: 2px;
-        text-align: center;
-    }
-
-
-    .linksContato {
-        background-color: rgb(97, 97, 97);
-        border-radius: 24px;
-        text-decoration: none;
-        color: white;
-        padding: 6px;
-        font-weight: bold;
-        cursor: pointer;
-        position: relative;
-        text-align: center;
-        font-size: 1.4em;
-        left: 1.5em;
-        box-shadow: -1px -2px 1px black;
-    }
-    .linksContato:hover {
-        border-bottom: 2px solid black;
-        transition: .5s;
-    }
-
-
-
-
-
-
-
-    footer {
-        background-color: black;
-        color: #fff;
-        width: 780px;
-        box-sizing: border-box;
-        margin: 0 auto;
-    }
-
-    #gatilhoNav {
-        display: none;
-    }
-
-
-/*ESTA PARTE ESTA DEDICADA APENAS AOS BOTÕES DOS CORROCÉIS*/
-
+/*Config dos BOTÕES dos carroceis dos EMPREENDIMENTOS*/
 .btnWp {
         position: absolute;
         width: 4em;
@@ -228,8 +253,8 @@
     position: absolute;
     left: 1em;
     top: 2.5em;
-    width: 5em;
-    height: 80%;
+    width: 4em;
+    height: 70%;
     cursor: pointer;
     border-radius: 3px;
     border-width: 0px;
@@ -238,14 +263,15 @@
     color: rgba(255, 255, 255, 0.63);
     font-size: 150%;
     box-shadow: -3px 3px 3px black;
+    margin: 0;
 }
 
 .exBtnDireito {
     position: absolute;
     right: 1em;
     top: 2.5em;
-    width: 5em;
-    height: 80%;
+    width: 4em;
+    height: 70%;
     cursor: pointer;
     border-radius: 3px;
     border-width: 0px;
@@ -254,6 +280,42 @@
     color: rgba(255, 255, 255, 0.63);
     font-size: 150%;
     box-shadow: 3px 3px 3px black;
+    margin: 0;
+}
+
+/*Final da página principal do site*/
+#contato
+{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-content: space-between;
+}
+h3
+{
+    text-align: center;
+    width: 100%;
+}
+.contatos
+{
+    width: 30%;
+    height: 5em;
+    text-align: center;
+    line-height: 5em;
+    display: inline;
+    margin: auto;
+    
 }
 
 
+
+/*config da área de desenvolvedor*/
+footer 
+{
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    bottom: 0;
+    color: aliceblue;
+}

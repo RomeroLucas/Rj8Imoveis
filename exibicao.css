@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+
+
+#empreendimentos #ex1 {
+    background-image: url("img/apto/saintMichel/gen1.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+}
+
+#empreendimentos #ex2 {
+    background-image: url("img/apto/viure/gen1.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+}
+
+#empreendimentos #ex3 {
+    background-image: url("img/apto/soul/gen1.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+}

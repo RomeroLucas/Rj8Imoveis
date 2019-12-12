@@ -1,0 +1,259 @@
+   
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: helvetica;
+        font-size: 10px;
+    }
+
+
+    /* Header and Nav */
+
+    header {
+        margin: 0 auto;
+        padding: 0;
+        width: 78em;
+        height: 34em;
+        position: fixed;
+        top: 0;
+        left: calc(50% - 39em);
+        box-sizing: border-box;
+        z-index: 2;
+        box-shadow: 8px 3px 8px gray;
+    }
+
+    #bannerHead {
+        background-image: url(img/menu.jpeg);
+        background-size: cover;
+        position: relative;
+        width: 78em;
+        height: 30em;
+        border: 3px solid black;
+        border-width: 0px 2px 0px 2px;
+        box-sizing: border-box;
+    }
+
+    #navMenuDesktop {
+        position: relative;
+        width: 78em;
+        height: 4em;
+        margin: 0;
+        padding: 0;
+        border: 3px solid black;
+        border-width: 0px 2px 3px 2px;
+        box-sizing: border-box;
+        z-index: 1;
+        background-color: #f1c40f;
+        display: flex;
+        align-content: space-between;
+    }
+    #navMenuDesktop a {
+        position: relative;
+        height: 35px;
+        margin: 0 auto;
+        color: rgb(68, 68, 68);
+        text-decoration: none;
+        box-sizing: border-box;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 35px;
+    }#navMenuDesktop a:hover {
+        color: rgb(99, 68, 1);
+
+        transition: .3s;
+    }
+
+    #btnNav {
+        display: none;
+    }
+    #navMenuMobile {
+        display: none;
+    }
+
+
+
+    /* corpo da página */
+
+    main {
+        background-color: #ecf0f1;
+        position: relative;
+        width: 78em;
+        border: 3px solid black;
+        border-width: 0px 2px 3px 2px;
+        padding: 5px;
+        margin: 0 auto;
+        margin-top: 34em;
+        box-sizing: border-box;
+    }
+
+    #quem {
+        padding: 6px;
+        position: relative;
+        border-bottom: 2px solid rgb(196, 196, 196);
+        border-radius: 2.4em;
+        margin: 12px auto;
+        width: 90%;
+        font-size: 1.2em;
+        box-shadow: 2px 2px 1px black;
+    }
+
+    .texto {
+        font-family: helvetica-serif;
+        font-size: 1.6em;
+        text-align: center;;
+    }
+
+
+    #empreendimentos {
+        position: relative;
+        width: 100%;
+
+
+        box-sizing: border-box;
+        margin: 12px auto;
+
+    }
+
+    .exibicao {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 295px;
+        margin: auto;
+        border: 2px solid rgb(124, 124, 124);
+        border-radius: 3px;
+    }
+    .exibicao p {
+        position: relative;
+        margin: 12px auto;
+        background-color: rgb(161, 161, 161);
+        width: 40%;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.6em;
+        z-index: 1;
+        border-radius: 24px;
+        box-shadow: 3px 3px 3px black;
+        opacity: .8;
+    }
+
+    .caracteristicasEx {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 6px;
+        padding: 24px;
+        border: 1px solid rgb(124, 124, 124);
+        border-width: 0px 2px 2px 2px;
+        border-radius: 0px 0px 3px 3px;
+    }
+
+    .campos {
+        width: 15%;
+        float: left;
+        margin: 0 4px;
+        color: rgb(61, 61, 61);
+        text-align: center;
+        font-size: 1.4em;
+        list-style: none;
+    }
+
+
+    #contato {
+        padding: 6px;
+        position: relative;
+        border: 2px solid black;
+        margin: 12px auto;
+        width: 90%;
+        border: 2px solid rgb(196, 196, 196);
+        border-width: 2px 0px 2px 0px;
+        border-radius: 2px;
+        text-align: center;
+    }
+
+
+    .linksContato {
+        background-color: rgb(97, 97, 97);
+        border-radius: 24px;
+        text-decoration: none;
+        color: white;
+        padding: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        font-size: 1.4em;
+        left: 1.5em;
+        box-shadow: -1px -2px 1px black;
+    }
+    .linksContato:hover {
+        border-bottom: 2px solid black;
+        transition: .5s;
+    }
+
+
+
+
+
+
+
+    footer {
+        background-color: black;
+        color: #fff;
+        width: 780px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    #gatilhoNav {
+        display: none;
+    }
+
+
+/*ESTA PARTE ESTA DEDICADA APENAS AOS BOTÕES DOS CORROCÉIS*/
+
+.btnWp {
+        position: absolute;
+        width: 4em;
+        height: 4em;
+        bottom: 2em;
+        left: 48%;
+        text-align: center;
+}
+
+.exBtnEsquerdo {
+    position: absolute;
+    left: 1em;
+    top: 2.5em;
+    width: 5em;
+    height: 80%;
+    cursor: pointer;
+    border-radius: 3px;
+    border-width: 0px;
+    background-color: rgba(161, 161, 161, 0.685);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 150%;
+    box-shadow: -3px 3px 3px black;
+}
+
+.exBtnDireito {
+    position: absolute;
+    right: 1em;
+    top: 2.5em;
+    width: 5em;
+    height: 80%;
+    cursor: pointer;
+    border-radius: 3px;
+    border-width: 0px;
+    background-color: rgb(161, 161, 161, 0.685);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 150%;
+    box-shadow: 3px 3px 3px black;
+}
+
+
